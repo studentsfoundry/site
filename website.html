@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students Foundry - Educational Analytics Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#4F94CD ", secondary: "#9ED2BE" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+          font-family: 'Inter', sans-serif;
+      }
+      .hero-section {
+          background-image: url('https://readdy.ai/api/search-image?query=modern%20educational%20technology%20background%20with%20soft%20blue%20gradient%2C%20abstract%20data%20visualization%20elements%2C%20clean%20and%20minimal%20design%20style%2C%20light%20atmosphere%2C%20perfect%20for%20text%20overlay%20on%20the%20left%20side%2C%20empty%20space%20on%20left%2C%20content%20on%20right&width=1600&height=800&seq=hero-bg-1&orientation=landscape');
+          background-size: cover;
+          background-position: center;
+      }
+      .hero-content {
+          background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.2) 100%);
+      }
+      .feature-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+      input:focus {
+          outline: none;
+      }
+      .custom-checkbox {
+          appearance: none;
+          -webkit-appearance: none;
+          height: 20px;
+          width: 20px;
+          background-color: #fff;
+          border: 2px solid #4F94CD;
+          border-radius: 4px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+      .custom-checkbox:checked {
+          background-color: #4F94CD;
+      }
+      .custom-checkbox:checked::after {
+          content: "";
+          width: 10px;
+          height: 10px;
+          background-color: white;
+          border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl font-['mono'] text-primary"
+          >Students Foundry</a
+        >
+        <nav class="hidden md:flex space-x-8">
+          <a
+            href="#what-we-do"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >What We Do</a
+          >
+          <a
+            href="#features"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Features</a
+          >
+          <a
+            href="#benefits"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Benefits</a
+          >
+          <a
+            href="#how-it-works"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >How It Works</a
+          >
+        </nav>
+        <button class="md:hidden w-10 h-10 flex items-center justify-center">
+          <i class="ri-menu-line text-xl"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section min-h-screen flex items-center pt-16">
+      <div class="hero-content w-full py-20 md:py-32">
+        <div class="container mx-auto px-4">
+          <div class="max-w-2xl">
+            <h1
+              class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+            >
+              When Analytics Lead, Outcomes Exceed
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-700 mb-8">
+              AI-powered student performance analytics for better visibility and
+              engagement.
+            </p>
+            <button
+              class="bg-primary text-white px-8 py-3 rounded-button text-lg font-medium hover:bg-opacity-90 transition-colors shadow-md whitespace-nowrap"
+            >
+              Explore Platform
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section id="what-we-do" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="md:w-1/2">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">What We Do</h2>
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+              Students Foundry harnesses the power of artificial intelligence
+              and automation to transform raw educational data into meaningful
+              insights. Our platform analyzes student performance patterns,
+              engagement metrics, and learning behaviors to provide schools with
+              actionable intelligence.
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              We seamlessly integrate with existing school management systems,
+              learning platforms, and assessment tools, requiring minimal
+              technical setup while delivering maximum value to educators,
+              administrators, and parents alike.
+            </p>
+          </div>
+          <div class="md:w-1/2">
+            <img
+              src="https://readdy.ai/api/search-image?query=modern%20educational%20data%20visualization%20concept%2C%20showing%20analytics%20dashboard%20with%20student%20performance%20metrics%2C%20clean%20design%20with%20blue%20and%20white%20color%20scheme%2C%20professional%20and%20minimalist%20style&width=600&height=400&seq=what-we-do-1&orientation=landscape"
+              alt="Educational Analytics"
+              class="rounded-lg shadow-lg w-full object-cover object-top"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Features Section -->
+    <section id="features" class="py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">
+          Core Features
+        </h2>
+        <p class="text-lg text-gray-700 mb-12 text-center max-w-3xl mx-auto">
+          Our platform offers a comprehensive suite of tools designed to provide
+          deep insights into student performance and engagement.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div
+            class="feature-card bg-white p-8 rounded-lg shadow-md border border-gray-100 transition-all duration-300"
+          >
+            <div
+              class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="ri-dashboard-line text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">
+              5-Metric Performance Dashboard
+            </h3>
+            <p class="text-gray-700">
+              Track attendance, grades, participation, assignment completion,
+              and growth metrics in one centralized, easy-to-interpret
+              dashboard.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div
+            class="feature-card bg-white p-8 rounded-lg shadow-md border border-gray-100 transition-all duration-300"
+          >
+            <div
+              class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="ri-line-chart-line text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">
+              Real-Time Engagement Tracking
+            </h3>
+            <p class="text-gray-700">
+              Monitor student engagement across digital platforms, classroom
+              activities, and learning resources with live updates and
+              historical trends.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div
+            class="feature-card bg-white p-8 rounded-lg shadow-md border border-gray-100 transition-all duration-300"
+          >
+            <div
+              class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="ri-robot-line text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">
+              AI-Powered Insights & Alerts
+            </h3>
+            <p class="text-gray-700">
+              Receive proactive notifications about performance changes,
+              potential issues, and opportunities for intervention before they
+              become problems.
+            </p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div
+            class="feature-card bg-white p-8 rounded-lg shadow-md border border-gray-100 transition-all duration-300"
+          >
+            <div
+              class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="ri-message-3-line text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">
+              Teacher–Parent Communication
+            </h3>
+            <p class="text-gray-700">
+              Facilitate data-driven conversations between educators and
+              families with shareable reports, automated updates, and
+              collaborative goal-setting tools.
+            </p>
+          </div>
+
+          <!-- Feature 5 -->
+          <div
+            class="feature-card bg-white p-8 rounded-lg shadow-md border border-gray-100 transition-all duration-300"
+          >
+            <div
+              class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="ri-file-chart-line text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Custom Reports</h3>
+            <p class="text-gray-700">
+              Generate tailored reports for different stakeholders, from
+              district-level analytics to individual student progress summaries
+              with just a few clicks.
+            </p>
+          </div>
+
+          <!-- Feature 6 -->
+          <div
+            class="feature-card bg-white p-8 rounded-lg shadow-md border border-gray-100 transition-all duration-300"
+          >
+            <div
+              class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="ri-database-2-line text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Seamless Integration</h3>
+            <p class="text-gray-700">
+              Connect with over 50 popular educational platforms and student
+              information systems with our secure API and pre-built connectors.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">
+          Who Benefits
+        </h2>
+        <p class="text-lg text-gray-700 mb-12 text-center max-w-3xl mx-auto">
+          Our platform creates value for everyone in the educational ecosystem.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Schools -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="ri-building-4-line text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 text-center">Schools</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                <span
+                  >Data-driven strategic planning and resource allocation</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                <span>Comprehensive school performance visibility</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                <span>Early identification of educational gaps</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                <span
+                  >Simplified reporting for accreditation and compliance</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Teachers -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="ri-user-line text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 text-center">Teachers</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                <span>Reduced administrative workload through automation</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                <span
+                  >Personalized teaching strategies based on student data</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                <span>Evidence-based parent-teacher conferences</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                <span>Classroom-level insights for improved instruction</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Parents -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="ri-parent-line text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 text-center">Parents</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                <span
+                  >Clear visibility into their child's academic journey</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                <span>Regular, meaningful updates on progress</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                <span>Early notification of potential challenges</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                <span>Tools to support learning at home</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">
+          How It Works
+        </h2>
+        <p class="text-lg text-gray-700 mb-12 text-center max-w-3xl mx-auto">
+          Getting started with Students Foundry is simple and straightforward.
+        </p>
+
+        <div class="relative">
+          <!-- Desktop Timeline -->
+          <div class="hidden md:block">
+            <div
+              class="absolute top-1/2 left-0 right-0 h-1 bg-gray-200 -translate-y-1/2"
+            ></div>
+            <div class="grid grid-cols-4 gap-6 relative">
+              <!-- Step 1 -->
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-xl font-bold mb-4 z-10"
+                >
+                  1
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-center">
+                  Onboarding
+                </h3>
+                <p class="text-center text-gray-700">
+                  Quick setup with our implementation team to understand your
+                  needs.
+                </p>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-xl font-bold mb-4 z-10"
+                >
+                  2
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-center">
+                  Data Integration
+                </h3>
+                <p class="text-center text-gray-700">
+                  Connect your existing systems with our secure API and
+                  connectors.
+                </p>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-xl font-bold mb-4 z-10"
+                >
+                  3
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-center">Insights</h3>
+                <p class="text-center text-gray-700">
+                  Access powerful analytics and actionable recommendations.
+                </p>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-xl font-bold mb-4 z-10"
+                >
+                  4
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-center">Outcomes</h3>
+                <p class="text-center text-gray-700">
+                  Improve student performance with data-driven decisions.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Timeline -->
+          <div class="md:hidden space-y-12">
+            <!-- Step 1 -->
+            <div class="flex items-start">
+              <div
+                class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white text-lg font-bold mr-4 flex-shrink-0"
+              >
+                1
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Onboarding</h3>
+                <p class="text-gray-700">
+                  Quick setup with our implementation team to understand your
+                  needs.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="flex items-start">
+              <div
+                class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white text-lg font-bold mr-4 flex-shrink-0"
+              >
+                2
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Data Integration</h3>
+                <p class="text-gray-700">
+                  Connect your existing systems with our secure API and
+                  connectors.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="flex items-start">
+              <div
+                class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white text-lg font-bold mr-4 flex-shrink-0"
+              >
+                3
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Insights</h3>
+                <p class="text-gray-700">
+                  Access powerful analytics and actionable recommendations.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="flex items-start">
+              <div
+                class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white text-lg font-bold mr-4 flex-shrink-0"
+              >
+                4
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Outcomes</h3>
+                <p class="text-gray-700">
+                  Improve student performance with data-driven decisions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Ready to transform your educational insights?
+        </h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">
+          Join thousands of schools already using Students Foundry to drive
+          better educational outcomes.
+        </p>
+        <button
+          class="bg-white text-primary px-8 py-3 rounded-button text-lg font-medium hover:bg-gray-100 transition-colors shadow-md whitespace-nowrap"
+        >
+          Get Started Today
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 py-12">
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center mb-8"
+        >
+          <a
+            href="#"
+            class="text-2xl font-['Pacifico'] text-primary mb-4 md:mb-0"
+            >Students Foundry</a
+          >
+          <div class="flex space-x-6">
+            <a
+              href="#"
+              class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition-colors"
+            >
+              <i class="ri-twitter-x-line"></i>
+            </a>
+            <a
+              href="#"
+              class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition-colors"
+            >
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a
+              href="#"
+              class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition-colors"
+            >
+              <i class="ri-facebook-line"></i>
+            </a>
+            <a
+              href="mailto:info@studentsfoundry.com"
+              class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition-colors"
+            >
+              <i class="ri-mail-line"></i>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-600 mb-4 md:mb-0">
+            © 2025 Students Foundry. All rights reserved.
+          </p>
+          <div class="flex space-x-6 text-sm">
+            <a
+              href="#"
+              class="text-gray-600 hover:text-primary transition-colors"
+              >Terms of Service</a
+            >
+            <a
+              href="#"
+              class="text-gray-600 hover:text-primary transition-colors"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="text-gray-600 hover:text-primary transition-colors"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script id="mobileMenuScript">
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.querySelector("button.md\\:hidden");
+        const mobileMenu = document.createElement("div");
+        mobileMenu.className =
+          "fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out";
+        mobileMenu.innerHTML = `
+                      <div class="flex justify-between items-center p-4 border-b">
+                          <a href="#" class="text-2xl font-['Pacifico'] text-primary">Students Foundry</a>
+                          <button class="w-10 h-10 flex items-center justify-center">
+                              <i class="ri-close-line text-xl"></i>
+                          </button>
+                      </div>
+                      <nav class="p-4">
+                          <a href="#what-we-do" class="block py-3 text-lg border-b border-gray-100">What We Do</a>
+                          <a href="#features" class="block py-3 text-lg border-b border-gray-100">Features</a>
+                          <a href="#benefits" class="block py-3 text-lg border-b border-gray-100">Benefits</a>
+                          <a href="#how-it-works" class="block py-3 text-lg">How It Works</a>
+                      </nav>
+                  `;
+        document.body.appendChild(mobileMenu);
+
+        const closeButton = mobileMenu.querySelector("button");
+        const navLinks = mobileMenu.querySelectorAll("nav a");
+
+        menuButton.addEventListener("click", function () {
+          mobileMenu.classList.remove("translate-x-full");
+          document.body.classList.add("overflow-hidden");
+        });
+
+        closeButton.addEventListener("click", function () {
+          mobileMenu.classList.add("translate-x-full");
+          document.body.classList.remove("overflow-hidden");
+        });
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.add("translate-x-full");
+            document.body.classList.remove("overflow-hidden");
+          });
+        });
+      });
+    </script>
+    <script id="scrollAnimationScript">
+      document.addEventListener("DOMContentLoaded", function () {
+        const scrollElements = document.querySelectorAll(".feature-card");
+
+        const elementInView = (el, dividend = 1) => {
+          const elementTop = el.getBoundingClientRect().top;
+          return (
+            elementTop <=
+            (window.innerHeight || document.documentElement.clientHeight) / dividend
+          );
+        };
+
+        const displayScrollElement = (element) => {
+          element.classList.add("opacity-100");
+          element.classList.remove("opacity-0", "translate-y-10");
+        };
+
+        const hideScrollElement = (element) => {
+          element.classList.add("opacity-0", "translate-y-10");
+          element.classList.remove("opacity-100");
+        };
+
+        scrollElements.forEach((el) => {
+          hideScrollElement(el);
+        });
+
+        const handleScrollAnimation = () => {
+          scrollElements.forEach((el) => {
+            if (elementInView(el, 1.25)) {
+              displayScrollElement(el);
+            }
+          });
+        };
+
+        window.addEventListener("scroll", () => {
+          handleScrollAnimation();
+        });
+
+        // Initial check
+        handleScrollAnimation();
+      });
+    </script>
+  </body>
+</html>
